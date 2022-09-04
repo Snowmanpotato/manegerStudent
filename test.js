@@ -16,9 +16,9 @@ function init() {
     if (getData(key_data) == null) {
         students = [
             new student('1', 'Đặng Phước Duy', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/1.jpg`),
-            new student('2', 'Hà Văn Luyn', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/2.jpg`),
-            new student('3', 'Nguyễn Trí Quốc Cường', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/3.jpg`),
-            new student('4', 'Nguyễn Dũng', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/4.jpg`)
+            new student('2', 'Hà Văn Luyn', '01/01/1998', 'Nam', 'luyn@gmail.com', `${avatar_url}/2.jpg`),
+            new student('3', 'Nguyễn Trí Quốc Cường', '01/01/1993', 'Nam', 'cuong@gmail.com', `${avatar_url}/3.jpg`),
+            new student('4', 'Nguyễn Dũng', '01/01/1993', 'Nam', 'dung@gmail.com', `${avatar_url}/4.jpg`)
         ];
         setData(key_data, students);
     }
