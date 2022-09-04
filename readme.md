@@ -16,5 +16,5 @@
 2. https://www.w3schools.com/graphics/game_intro.asp
 
 ## Kết quả
-1. link git: 
+1. link git: https://github.com/Snowmanpotato/manegerStudent
 2. link sản phẩm: https://khoanguyen84.github.io/AppContact/
