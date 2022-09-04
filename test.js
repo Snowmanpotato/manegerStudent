@@ -84,7 +84,7 @@ function resetModal() {
     document.querySelector('#dob').value = '';
     document.querySelector('input[name="Gender"]:checked').checked = false;
     document.querySelector('#mail').value = '';
-    document.querySelector('#picture').src = '';
+    document.querySelector('#picture').value = '';
 }
 
 // hàm xóa học viên
