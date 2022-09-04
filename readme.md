@@ -9,7 +9,7 @@
 + Array methods (map, find, splice, ...)
 + LocalStorage (setItem, getItem)
 + function
-+ 
++ classes
 
 ## Các thư viện tham khảo
 1. https://stackoverflow.com/
@@ -17,4 +17,4 @@
 
 ## Kết quả
 1. link git: https://github.com/Snowmanpotato/manegerStudent
-2. link sản phẩm: https://khoanguyen84.github.io/AppContact/
+2. link sản phẩm: https://snowmanpotato.github.io/manegerStudent/

@@ -13,12 +13,12 @@ const key_data = 'manegerStudent_data'
 const avatar_url = 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar';
 var students = [];
 function init() {
-    if (localStorage.getItem('manegerStudent_data') == null) {
+    if (getData(key_data) == null) {
         students = [
-            new student('2513684', 'Đặng Phước Duy', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/1.jpg`),
-            new student('2513684', 'Đặng Phước Duy', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/1.jpg`),
-            new student('2513684', 'Đặng Phước Duy', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/1.jpg`),
-            new student('2513684', 'Đặng Phước Duy', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/1.jpg`)
+            new student('1', 'Đặng Phước Duy', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/1.jpg`),
+            new student('2', 'Hà Văn Luyn', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/2.jpg`),
+            new student('3', 'Nguyễn Trí Quốc Cường', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/3.jpg`),
+            new student('4', 'Nguyễn Dũng', '01/01/1999', 'Nam', 'duy@gmail.com', `${avatar_url}/4.jpg`)
         ];
         setData(key_data, students);
     }
@@ -27,17 +27,16 @@ function init() {
     }
 };
 function getData(key) {
-    return JSON.parse(localStorage.getItem(key))
+    return JSON.parse(localStorage.getItem(key));
 }
 function setData(key, data) {
-    localStorage.setItem(key, JSON.stringify(data))
+    return localStorage.setItem(key, JSON.stringify(data));
 }
 //tạo hàm in dữ liệu trong mảng stdents
 function renderStudents() {
     let htmls = students.map(function (student, index) {
         return `
             <tr id="tr_${index}">
-                <td>${index + 1}</td>
                 <td id='td1${index}'>${student.Code}</td>
                 <td id='td2${index}'>${student.Name}</td>
                 <td id='td3${index}'>${student.Dob}</td>
@@ -72,7 +71,9 @@ function addStudent() {
         Mail: mail,
         Pic: pic
     }
+
     students.push(student);
+    setData(key_data, students);
     renderStudents();
     resetModal();
 }
@@ -91,6 +92,7 @@ function delStudent(index) {
     let confirm = window.confirm('Bạn có muốn xóa dữ liệu học viên này không?');
     if (confirm) {
         students.splice(index, 1);
+        setData(key_data, students);
         renderStudents();
     }
 }
@@ -102,6 +104,7 @@ function updateStudent(index) {
     document.querySelector(`#td4${index}`).innerHTML = `<input type="text" value='${students[index].Gender}'>`;
     document.querySelector(`#td5${index}`).innerHTML = `<input type="email" value='${students[index].Mail}'>`;
     document.querySelector(`#td6${index}`).innerHTML = `<input type="url" value='${students[index].Pic}'>`;
+    setData(key_data, students);
 }
 //hàm lưu học viên                                                                            
 function saveEdit(index) {
