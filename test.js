@@ -62,7 +62,7 @@ function addStudent() {
     let date = document.querySelector('#dob').value;
     let gender = document.querySelector('input[name="Gender"]:checked').value;
     let mail = document.querySelector('#mail').value;
-    let pic = document.querySelector('#img').value;
+    let pic = document.querySelector('#picture').value;
     let student = {
         Code: code,
         Name: name,
@@ -83,8 +83,8 @@ function resetModal() {
     document.querySelector('#name').value = '';
     document.querySelector('#dob').value = '';
     document.querySelector('input[name="Gender"]:checked').checked = false;
-    document.querySelector('.table1>tbody>#mail').value = '';
-    document.querySelector('#img').src = '';
+    document.querySelector('#mail').value = '';
+    document.querySelector('#picture').src = '';
 }
 
 // hàm xóa học viên
