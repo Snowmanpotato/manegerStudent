@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý học viên</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <table class="table1">
+                <tbody>
+                    <caption class="cap1">Thông tin học viên</caption>
+                    <tr>
+                        <td>Mã học viên</td>
+                        <td>
+                            <input class="form-control" type="number" id="cod" placeholder="0123-456" ;>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Họ và Tên</td>
+                        <td><input class="form-control" type="text" id="name" placeholder="Nguyễn Văn A" ;></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Sinh</td>
+                        <td><input class="form-control" type="text" id="dob" placeholder="01/01/2011"></td>
+                    </tr>
+                    <tr>
+                        <td> Giới tính</td>
+                        <td>
+                            <input type="radio" id="man" name="Gender" value="Nam" ;>
+                            <label for="man">Nam</label>
+                            <input type="radio" id="lady" name="Gender" value="Nữ" ;>
+                            <label for="lady">Nữ</label>
+                            <input type="radio" id="lgbt" name="Gender" value="Khác" ;>
+                            <label for="lgbt">Khác</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Email</td>
+                        <td><input class="form-control" type="email" id="mail" placeholder="exempal@gmail.com" ;></td>
+                    </tr>
+                    <tr>
+                        <td> Ảnh</td>
+                        <td><input class="form-control" type="url" id="img" placeholder="URL";></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button  class="btn btn-tdthem" onclick="addStudent()" ;>Thêm</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="column">
+            <table class="table2">
+                <caption class="cap1">Danh sách học viên</caption>
+                <thead>
+                    <tr>
+                        <td>STT</td>
+                        <td>Mã học viên</td>
+                        <td>Họ và Tên</td>
+                        <td>Ngày Sinh</td>
+                        <td>Giới tính</td>
+                        <td>Email</td>
+                        <td>Ảnh</td>
+                        <td>Hành động</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</body>
+<script src="test.js">
+
+</script>
+
+</html>

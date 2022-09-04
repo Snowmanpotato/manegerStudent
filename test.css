@@ -1,0 +1,119 @@
+* {
+
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.row {
+
+
+
+    vertical-align: center;
+    text-align: right;
+    max-width: 1920px;
+    margin: 5px auto;
+}
+
+.cap1 {
+    font-size: 30px;
+}
+
+
+.column {
+
+
+    overflow: auto;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    border: 1px solid #EFEFEF;
+    padding: 5px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-tdthem {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-tdthem:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-buttonUpdate {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-buttonUpdate:hover {
+    color: #212529;
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+.btn-buttonDel {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-buttonDel:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.form-control {
+    flex-grow: 1;
+    padding: 3px 0px;
+    border: none;
+    outline: none;
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+
+.table1,
+.table2 {
+    background-color: #a6abaf;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.table2 {
+
+    width: 100%;
+    cursor: pointer;
+}
+
+.table2>tbody>tr:hover {
+    background-color: #7a8085;
+}
+
+.table2,
+tr,
+td,
+th {
+    border-collapse: collapse;
+    padding: 3px;
+    border: 1px dashed #333;
+}
+
+.table2>thead {
+    background-color: rgb(211, 156, 156);
+}
+
+.table2>thead>tr>th {
+    padding: 5px 0px;
+    color: #fff;
+}
