@@ -47,7 +47,7 @@ function renderStudents() {
                 </td>   
                 <td>          
                     <button class='btn btn-buttonSave ' onclick='saveEdit(${index})'>Lưu</button>           
-                    <button class='btn btn-buttonUpdate' onclick='updateStudent(${index})'>Sửa</button>           
+                    <button class='btn btn-buttonUpdate ' onclick='updateStudent(${index})'>Sửa</button>           
                     <button class='btn btn-buttonDel' onclick='delStudent(${index})'>Xóa</button>           
             </tr>
             `;
@@ -58,11 +58,27 @@ function renderStudents() {
 //hàm thêm học viên
 function addStudent() {
     let code = document.querySelector('#cod').value;
+    if (code.trim() == "" || code == null) {
+        return alert("Nhập Mã học viên!");
+    };
     let name = document.querySelector('#name').value;
+    if (name.trim() == "" || name == null) {
+        return alert("Nhập Tên học viên!");
+    };
     let date = document.querySelector('#dob').value;
+    if (date.trim() == "" || date == null) {
+        return alert("Nhập ngày sinh học viên!");
+    };
     let gender = document.querySelector('input[name="Gender"]:checked').value;
+    
     let mail = document.querySelector('#mail').value;
+    if (mail.trim() == "" || mail == null) {
+        return alert("Nhập email học viên!");
+    };
     let pic = document.querySelector('#picture').value;
+    if (pic.trim() == "" || pic == null) {
+        return alert("Nhập link ảnh!");
+    };
     let student = {
         Code: code,
         Name: name,
